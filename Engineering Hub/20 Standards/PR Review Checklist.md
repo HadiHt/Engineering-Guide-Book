@@ -20,8 +20,11 @@ If any required item fails, the change is not ready.
 
 - [ ] UI states are covered where relevant: loading, error, empty, success
 - [ ] Data flow follows the project pattern
+- [ ] API calls stay in hooks and request modules, with cancellation and error handling in the correct layer
 - [ ] User-facing text follows the app's i18n approach
 - [ ] Accessibility basics are present
+- [ ] For mobile work, layouts and interactions were checked for safe areas, keyboard handling, touch targets, and platform-specific behavior
+- [ ] For mobile work, permission flows, offline behavior, and resume/background handling were reviewed where relevant
 - [ ] Types are precise enough for the changed area
 
 ## Backend Checks
@@ -30,6 +33,9 @@ If any required item fails, the change is not ready.
 - [ ] Controller, orchestration, business logic, and persistence concerns are separated correctly
 - [ ] Contract changes were traced through affected layers
 - [ ] Authorization and exception behavior are explicit
+- [ ] Outbound API calls, background work, and loops honor async, cancellation, and ownership boundaries
+- [ ] SignalR changes respect hub lifetimes, `IHubContext` usage, and delivery assumptions
+- [ ] Logging is structured, appropriately scoped, and free of sensitive payloads
 
 ## Git And Merge Hygiene
 

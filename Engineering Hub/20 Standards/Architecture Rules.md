@@ -23,6 +23,14 @@ Define stable ownership boundaries so changes land in the correct layer.
 
 Keep transport, state orchestration, and presentation concerns separate.
 
+### Project Structure
+
+- Prefer route- or feature-oriented structure over broad technical buckets such as one global `components` or `utils` folder for everything.
+- Web apps should keep route entry files in the framework's routing area and colocate route-local UI, hooks, loaders, and tests with the route or feature that owns them.
+- Mobile apps should keep screens in the navigation tree, keep navigator composition and app-wide providers in the root layout, and keep reusable feature logic outside route files.
+- When using file-based routers, keep shared implementation files in explicit private or shared folders so they do not become accidental routes.
+- Keep global providers narrow. Prefer feature or route-group boundaries for providers that are not needed app-wide.
+
 ## Backend
 
 ### Typical Layering
@@ -42,6 +50,7 @@ Keep transport, state orchestration, and presentation concerns separate.
 - do not put mapping in facades
 - do not put persistence logic outside repositories
 - do not let shared contracts drift across layers without review
+- keep outbound integrations behind focused clients or services instead of scattering HTTP or SignalR calls through controllers and managers
 
 ## Cross-Layer Rules
 
