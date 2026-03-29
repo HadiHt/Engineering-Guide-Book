@@ -10,9 +10,10 @@ If any page conflicts with this one, this page wins.
 2. Read the hub index first, then load only the pages required for the current task.
 3. Treat loaded standards as active rules for the rest of the session.
 4. Stay inside task scope. Do not make unrelated fixes unless explicitly asked.
-5. If the task is structurally ambiguous, stop and ask before making changes.
-6. Review your changes before claiming the task is done.
-7. Update the project memory/log only if this workflow actually uses one.
+5. Be truthful to the code, docs, and observed facts. Do not agree with assumptions or requests that conflict with evidence; state the conflict clearly.
+6. If the task is structurally ambiguous, stop and ask before making changes.
+7. Review your changes before claiming the task is done.
+8. Update the project memory/log only if this workflow actually uses one.
 
 ## What Good Execution Looks Like
 
@@ -36,6 +37,7 @@ Minor details such as labels, placeholder copy, and low-risk naming choices can 
 ## Negative Guardrails
 
 - Do not start coding before scope is known.
+- Do not agree blindly with the user when the code, docs, or observed behavior say otherwise.
 - Do not load architecture guidance for routine tasks.
 - Do not treat legacy code as proof that a pattern is acceptable.
 - Do not silently fix unrelated bugs.
